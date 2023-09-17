@@ -1,0 +1,2 @@
+import './listOfProducts.js'
+

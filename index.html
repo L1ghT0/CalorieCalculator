@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="src/assets/styles/style.css">
+    <script defer src="src/js/index.js" type="module"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="header-leftside">
+            <div id="logo"><h1>Calorie calculator</h1></div>
+            <div class="filter"><input type="text" placeholder="Filter" id="filter"></div>
+        </div>
+        <div class="header-rightside">
+            <nav class="header-nav">
+                <div class="hnav-item"><input type="button" value="start new day" id="newDay"></div>
+                <div class="hnav-item"><input type="button" value="continue day" id="continueDay"></div>
+
+                <div class="hnav-item"><input type="button" value="Delete selected" id="deleteSelected"></div>
+                <div class="hnav-item"><input type="button" value="Delete all" id="deleteAll"></div>
+                <div class="hnav-item"><input type="button" value="Add product" id="addProduct"></div>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="content">
+        <table class="list-of-products">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Calories</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="general-calories-info">
+            <div class="calories-info">
+                <span id="caloriesEaten">0</span>/<span id="maxCalories">0</span>calories
+            </div>
+            <div class="diagram-wrapper">
+                <div class="diagram">
+                    <span id="diagramFilledPercentage">0</span>%
+                </div>
+                <div class="diagram-info">
+                    <div class="white"><span class="whiteSquare"></span><span>- calories left</span></div>
+                    <div class="green"><span class="greenSquare"></span><span>- calories eaten</span></div>
+                    <div class="red"><span class="redSquare"></span><span>- out of calories limit</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modals">
+        <div class="setCaloriesLimit">
+            <div class="close"></div>
+            <form>
+                <div>
+                    <label for="setCaloriesLimit">Set a calories limit for the day</label>
+                    <input type="text" id="caloriesLimit">
+                </div>
+                <input type="submit" id="setCaloriesLimit" value="set">
+            </form>
+        </div>
+        <div id="new-product-form">
+            <div class="close"></div>
+            <form>
+                <div class="productName">
+                    <label for="productName">Product name</label>
+                    <input type="text" id="productName">
+                </div>
+                <div class="productCalories">
+                    <label for="calories">Calories</label>
+                    <input type="text" id="calories">
+                </div>
+                <input type="submit" value="add product" id="submit">
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
